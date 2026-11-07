@@ -1,0 +1,703 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>NRM FITNESS</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="NRM FITNESS is a modern gym on Pal Road, Keshavnagar, Jodhpur. Weight training, CrossFit, HIIT, yoga, Zumba, personal training and nutrition consulting. Rated 4.9 on Google by 520 members.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&family=Big+Shoulders+Display:wght@700;800;900&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HealthClub","name":"NRM FITNESS","telephone":"+91 98283 50520","address":{"@type":"PostalAddress","streetAddress":"1st & 2nd Floor, Pal Road, Opposite Ashok Udyan, Keshavnagar","addressLocality":"Jodhpur","addressRegion":"Rajasthan","postalCode":"342008","addressCountry":"IN"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"520"}}
+</script>
+<style>
+/* Layout concept: heavy condensed type on near-black, one electric red-orange accent, barbell-plate rings as the recurring graphic motif. */
+:root {
+  --bg: #0b0b0c;
+  --bg-2: #121213;
+  --panel: #19191b;
+  --line: #2b2b2e;
+  --fg: #f6f4f1;
+  --muted: #a8a39d;
+  --accent: #ff4a1c;
+  --on-accent: #0b0b0c;
+  --font-display: 'Big Shoulders Display', 'Arial Narrow', Impact, sans-serif;
+  --font-body: 'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-label: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --nav-h: 68px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 12px); }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--bg); z-index: 60; }
+a { color: inherit; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { font-family: var(--font-display); text-transform: uppercase; line-height: .95; letter-spacing: .005em; text-wrap: balance; font-weight: 800; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.label { font-family: var(--font-label); text-transform: uppercase; letter-spacing: .16em; font-weight: 600; font-size: .9rem; color: var(--accent); }
+.sec { padding-block: clamp(64px, 9vw, 120px); }
+.sec-alt { background: var(--bg-2); border-block: 1px solid var(--line); }
+.sec-head { display: grid; gap: 14px; margin-bottom: clamp(32px, 5vw, 56px); max-width: 760px; }
+.sec-head h2 { font-size: clamp(2.6rem, 6.5vw, 4.8rem); }
+.sec-head p { color: var(--muted); max-width: 60ch; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 28px; border: 2px solid var(--accent); background: var(--accent); color: var(--on-accent); font-family: var(--font-label); font-weight: 700; font-size: 1.05rem; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: transform .2s, background .2s, color .2s, border-color .2s; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px)); }
+.btn:hover { transform: translateY(-2px); background: var(--fg); border-color: var(--fg); }
+.btn.ghost { background: transparent; color: var(--fg); border-color: #4a4a4e; }
+.btn.ghost:hover { border-color: var(--accent); color: var(--accent); background: transparent; }
+.btn.sm { min-height: 42px; padding: 0 18px; font-size: .92rem; }
+.btn.block { width: 100%; }
+
+/* Header */
+header.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: rgba(11,11,12,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.nav-in { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: var(--nav-h); }
+.logo { font-family: var(--font-display); font-weight: 900; font-size: 1.9rem; letter-spacing: .02em; text-decoration: none; display: flex; align-items: center; gap: 10px; line-height: 1; }
+.logo .mk { width: 30px; height: 30px; color: var(--accent); flex: none; }
+.logo b { color: var(--accent); font-weight: 900; }
+.links { display: none; gap: 26px; }
+.links a { font-family: var(--font-label); font-weight: 600; text-transform: uppercase; letter-spacing: .14em; font-size: .95rem; text-decoration: none; color: var(--muted); padding: 6px 0; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
+.links a:hover { color: var(--fg); border-color: var(--accent); }
+.nav-r { display: flex; align-items: center; gap: 12px; }
+.burger { width: 46px; height: 46px; border: 1px solid var(--line); background: transparent; color: var(--fg); display: grid; place-items: center; cursor: pointer; }
+.burger svg { width: 22px; height: 22px; }
+.mobile-menu { border-top: 1px solid var(--line); background: var(--bg); }
+.mobile-menu .wrap { display: grid; padding-block: 8px 20px; }
+.mobile-menu a { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: 1.7rem; text-decoration: none; padding: 12px 0; border-bottom: 1px solid var(--line); }
+@media (min-width: 1000px) { .links { display: flex; } .burger { display: none; } }
+@media (max-width: 420px) { .nav-r .btn { padding: 0 14px; letter-spacing: .08em; } }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; padding-block: clamp(56px, 10vw, 128px) clamp(48px, 7vw, 88px); background: radial-gradient(900px 500px at 85% 20%, rgba(255,74,28,.16), transparent 60%), var(--bg); }
+.hero .plates { position: absolute; right: -14%; top: 50%; width: min(78vw, 820px); aspect-ratio: 1; transform: translateY(-50%); color: var(--line); pointer-events: none; opacity: .9; }
+.hero .slash { position: absolute; left: -10%; bottom: 0; width: 120%; height: 10px; background: linear-gradient(90deg, var(--accent) 0 28%, transparent 28%); }
+.hero-in { position: relative; display: grid; gap: 34px; }
+.hero h1 { font-size: clamp(3.6rem, 12.5vw, 9.6rem); font-weight: 900; line-height: .86; }
+.hero h1 span { display: block; }
+.hero h1 .out { color: transparent; -webkit-text-stroke: 2px var(--fg); }
+.hero h1 .acc { color: var(--accent); }
+.hero .sub { font-size: clamp(1.05rem, 2vw, 1.3rem); color: #d9d5d0; max-width: 52ch; }
+.hero .tag { font-family: var(--font-label); letter-spacing: .22em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+.cta-row { display: flex; flex-wrap: wrap; gap: 14px; }
+.rating { display: inline-flex; align-items: center; gap: 16px; padding: 14px 20px; border: 1px solid var(--line); background: rgba(25,25,27,.8); width: fit-content; max-width: 100%; }
+.rating .big { font-family: var(--font-display); font-weight: 900; font-size: 3rem; line-height: 1; }
+.stars { display: flex; gap: 3px; color: var(--accent); }
+.stars svg { width: 18px; height: 18px; }
+.rating small { display: block; color: var(--muted); font-size: .95rem; margin-top: 4px; }
+
+/* Ticker */
+.ticker { background: var(--accent); color: var(--on-accent); overflow: hidden; border-block: 1px solid var(--accent); }
+.ticker-track { display: flex; width: max-content; animation: tick 38s linear infinite; }
+.ticker span { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: 1.5rem; letter-spacing: .04em; padding: 12px 0; white-space: nowrap; }
+.ticker span::after { content: "/"; margin: 0 22px; opacity: .55; }
+@keyframes tick { to { transform: translateX(-50%); } }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(2, 1fr); border-bottom: 1px solid var(--line); }
+.stat { padding: 28px 20px; border-right: 1px solid var(--line); border-top: 1px solid var(--line); }
+.stat:nth-child(2n) { border-right: 0; }
+.stat b { display: block; font-family: var(--font-display); font-weight: 900; font-size: clamp(2.4rem, 6vw, 3.8rem); line-height: 1; font-variant-numeric: tabular-nums; }
+.stat span { color: var(--muted); font-family: var(--font-label); text-transform: uppercase; letter-spacing: .14em; font-size: .9rem; }
+@media (min-width: 800px) { .stats { grid-template-columns: repeat(4, 1fr); } .stat { border-top: 0; } .stat:nth-child(2n) { border-right: 1px solid var(--line); } .stat:last-child { border-right: 0; } }
+
+/* About */
+.about { display: grid; gap: 40px; }
+.about h2 { font-size: clamp(2.6rem, 6.5vw, 4.8rem); margin-block: 14px 22px; }
+.about p { color: var(--muted); max-width: 56ch; }
+.about p + p { margin-top: 14px; }
+.points { display: grid; border-top: 1px solid var(--line); }
+.points li { list-style: none; display: grid; grid-template-columns: 40px 1fr; gap: 16px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--line); font-weight: 500; font-size: 1.1rem; }
+.points svg { width: 30px; height: 30px; color: var(--accent); }
+.points { margin: 0; padding: 0; }
+@media (min-width: 900px) { .about { grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; } }
+
+/* Programs */
+.grid-prog { display: grid; gap: 20px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .grid-prog { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 980px) { .grid-prog { grid-template-columns: repeat(3, 1fr); } }
+.card { display: flex; flex-direction: column; background: var(--panel); border: 1px solid var(--line); transition: transform .3s, border-color .3s; min-width: 0; }
+.card:hover { transform: translateY(-6px); border-color: var(--accent); }
+.card .vis { position: relative; aspect-ratio: 16 / 9; display: grid; place-items: center; overflow: hidden; background: repeating-radial-gradient(circle at 50% 120%, #1f1f22 0 2px, transparent 2px 26px), linear-gradient(160deg, #222225, #141416); border-bottom: 1px solid var(--line); }
+.card .vis::after { content: ""; position: absolute; inset: auto 0 0 0; height: 4px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .4s; }
+.card:hover .vis::after { transform: scaleX(1); }
+.card .vis svg { width: 76px; height: 76px; color: var(--fg); transition: transform .4s, color .3s; }
+.card:hover .vis svg { transform: scale(1.12) rotate(-4deg); color: var(--accent); }
+.card .body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.card h3 { font-size: 1.9rem; }
+.card p { color: var(--muted); font-size: 1rem; flex: 1; }
+.card .btn { margin-top: 10px; align-self: flex-start; }
+
+/* Why */
+.why { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); grid-template-columns: 1fr; }
+@media (min-width: 600px) { .why { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 980px) { .why { grid-template-columns: repeat(4, 1fr); } }
+.why > div { background: var(--bg-2); padding: 30px 24px; display: grid; gap: 14px; align-content: start; transition: background .3s; }
+.why > div:hover { background: var(--panel); }
+.why svg { width: 36px; height: 36px; color: var(--accent); }
+.why h3 { font-size: 1.55rem; }
+.why p { color: var(--muted); font-size: .98rem; }
+
+/* Gallery */
+.gal { display: grid; gap: 14px; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 190px; }
+@media (min-width: 900px) { .gal { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 230px; } }
+.tile { position: relative; overflow: hidden; border: 1px solid var(--line); background: linear-gradient(160deg, #232326, #131315); display: flex; align-items: flex-end; padding: 18px; min-width: 0; transition: border-color .3s; }
+.tile:hover { border-color: var(--accent); }
+.tile::before { content: ""; position: absolute; inset: 0; background: repeating-radial-gradient(circle at 100% 0, rgba(255,255,255,.045) 0 2px, transparent 2px 30px); }
+.tile svg { position: absolute; right: -14px; top: -14px; width: 62%; max-width: 230px; color: rgba(255,255,255,.07); transition: transform .5s, color .4s; }
+.tile:hover svg { transform: scale(1.08) rotate(-5deg); color: rgba(255,74,28,.28); }
+.tile .cap { position: relative; display: grid; gap: 2px; }
+.tile .cap b { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: 1.5rem; line-height: 1; }
+.tile .cap span { font-family: var(--font-label); letter-spacing: .14em; text-transform: uppercase; font-size: .82rem; color: var(--accent); font-weight: 600; }
+.t1 { grid-column: span 2; grid-row: span 2; }
+.t4 { grid-column: span 2; }
+@media (max-width: 899px) { .t4 { grid-column: span 2; } .t1 { grid-row: span 1; } }
+
+/* Reviews */
+.rev-top { display: flex; flex-wrap: wrap; gap: 28px; align-items: center; justify-content: space-between; margin-bottom: 36px; }
+.rev-grid { display: grid; gap: 18px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .rev-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 980px) { .rev-grid { grid-template-columns: repeat(3, 1fr); } }
+.rev { background: var(--panel); border: 1px solid var(--line); padding: 28px 26px; display: grid; gap: 14px; align-content: start; transition: border-color .3s, transform .3s; }
+.rev:hover { border-color: var(--accent); transform: translateY(-4px); }
+.rev h3 { font-size: 1.7rem; }
+.rev p { color: var(--muted); }
+.rev .stars svg { width: 15px; height: 15px; }
+.note { color: var(--muted); font-size: .92rem; margin-top: 22px; }
+
+/* Membership */
+.plans { display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .plans { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1040px) { .plans { grid-template-columns: repeat(5, 1fr); } }
+.plan { background: var(--panel); border: 1px solid var(--line); padding: 26px 22px; display: grid; gap: 12px; align-content: start; transition: border-color .3s, transform .3s; min-width: 0; }
+.plan:hover { border-color: var(--accent); transform: translateY(-4px); }
+.plan.feat { border-color: var(--accent); background: linear-gradient(180deg, rgba(255,74,28,.12), var(--panel) 60%); }
+.plan h3 { font-size: 1.75rem; }
+.plan .price { font-family: var(--font-label); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); font-size: 1rem; line-height: 1.3; }
+.plan p { color: var(--muted); font-size: .96rem; }
+.join { margin-top: 44px; display: grid; gap: 36px; background: var(--panel); border: 1px solid var(--line); padding: clamp(24px, 4vw, 48px); }
+@media (min-width: 900px) { .join { grid-template-columns: 5fr 7fr; align-items: start; } }
+.join h3 { font-size: clamp(2.2rem, 5vw, 3.4rem); margin-block: 12px 14px; }
+.join .lead { color: var(--muted); }
+
+/* Forms */
+form { display: grid; gap: 16px; }
+.row2 { display: grid; gap: 16px; }
+@media (min-width: 560px) { .row2 { grid-template-columns: 1fr 1fr; } }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field label { font-family: var(--font-label); text-transform: uppercase; letter-spacing: .14em; font-weight: 600; font-size: .86rem; color: var(--muted); }
+.field input, .field select, .field textarea { width: 100%; background: var(--bg); color: var(--fg); border: 1px solid #3a3a3e; padding: 14px 14px; font: inherit; font-size: 1rem; border-radius: 0; transition: border-color .2s; }
+.field textarea { min-height: 112px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(255,74,28,.25); }
+.field .err { color: #ff8a70; font-size: .88rem; min-height: 1.1em; }
+.result { border: 1px solid var(--accent); background: rgba(255,74,28,.08); padding: 20px; display: grid; gap: 14px; }
+.result p { color: #e7e3de; }
+.result .acts { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* Contact */
+.contact { display: grid; gap: 28px; }
+@media (min-width: 960px) { .contact { grid-template-columns: 1fr 1fr; gap: 40px; } }
+.info { display: grid; gap: 0; border-top: 1px solid var(--line); margin-bottom: 22px; }
+.info > div { display: grid; grid-template-columns: 44px 1fr; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.info svg { width: 28px; height: 28px; color: var(--accent); }
+.info h3 { font-family: var(--font-label); letter-spacing: .14em; font-size: .88rem; color: var(--muted); font-weight: 600; line-height: 1.2; margin-bottom: 4px; }
+.info p, .info a { font-size: 1.08rem; font-weight: 500; overflow-wrap: anywhere; }
+.info .dim { color: var(--muted); font-size: .95rem; font-weight: 400; }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; }
+.map { position: relative; min-height: 300px; border: 1px solid var(--line); overflow: hidden; display: grid; align-content: end; padding: 24px; gap: 14px; background:
+  linear-gradient(90deg, transparent 49.2%, #2e2e32 49.2% 50.8%, transparent 50.8%) 0 0 / 120px 120px,
+  linear-gradient(0deg, transparent 49.2%, #2e2e32 49.2% 50.8%, transparent 50.8%) 0 0 / 120px 120px,
+  linear-gradient(135deg, transparent 49.4%, #3a2a25 49.4% 50.6%, transparent 50.6%) 0 0 / 240px 240px,
+  #151517; }
+.map .pin { position: absolute; left: 50%; top: 38%; width: 44px; height: 44px; margin: -44px 0 0 -22px; color: var(--accent); }
+.map .pulse { position: absolute; left: 50%; top: 38%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; border: 2px solid var(--accent); animation: pulse 2.4s ease-out infinite; }
+@keyframes pulse { from { transform: scale(.6); opacity: 1; } to { transform: scale(4); opacity: 0; } }
+.map .box { position: relative; background: rgba(11,11,12,.9); border: 1px solid var(--line); padding: 16px 18px; display: grid; gap: 4px; }
+.map .box b { font-family: var(--font-display); font-size: 1.4rem; text-transform: uppercase; font-weight: 800; }
+.map .box span { color: var(--muted); font-size: .95rem; }
+
+/* Footer */
+footer { background: #070708; border-top: 1px solid var(--line); padding-block: 64px 28px; }
+.f-grid { display: grid; gap: 36px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .f-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .f-grid { grid-template-columns: 1.5fr 1fr 1fr 1.3fr; } }
+footer h4 { font-family: var(--font-label); text-transform: uppercase; letter-spacing: .16em; color: var(--accent); font-size: .9rem; margin: 0 0 14px; font-weight: 600; }
+footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+footer li, footer p { color: var(--muted); font-size: .98rem; }
+footer a { text-decoration: none; transition: color .2s; }
+footer a:hover { color: var(--accent); }
+.f-brand p { margin-top: 14px; max-width: 36ch; }
+.soc { display: flex; gap: 10px; margin-top: 18px; }
+.soc a { width: 44px; height: 44px; border: 1px solid var(--line); display: grid; place-items: center; color: var(--fg); transition: border-color .2s, color .2s; }
+.soc a:hover { border-color: var(--accent); color: var(--accent); }
+.soc svg { width: 20px; height: 20px; }
+.copy { margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; color: var(--muted); font-size: .9rem; }
+
+/* WhatsApp float */
+.wa { position: fixed; right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 55; width: 58px; height: 58px; border-radius: 50%; background: #25d366; color: #0b0b0c; display: grid; place-items: center; box-shadow: 0 8px 24px rgba(0,0,0,.5); transition: transform .2s; }
+.wa:hover { transform: scale(1.08); }
+.wa svg { width: 30px; height: 30px; }
+
+/* Motion */
+.rv { transform: translateY(20px); transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.rv.in { transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .ticker-track, .map .pulse { animation: none; }
+  .rv { transform: none; transition: none; }
+  .card, .card *, .btn, .tile, .tile * { transition: none; }
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 18l-6.4 3.6L7 14.5 1.7 9.5l7.2-.9z"/></symbol>
+    <symbol id="i-plate" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="20"/><circle cx="24" cy="24" r="12"/><circle cx="24" cy="24" r="3.5"/></g></symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 14v20M10 18v12M32 14v20M38 18v12M3 24h7M38 24h7M16 24h16"/></g></symbol>
+    <symbol id="i-kettle" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 17c0-9 18-9 18 0"/><path d="M12 38c-4-6-2-13 4-17 5-3 11-3 16 0 6 4 8 11 4 17z"/></g></symbol>
+    <symbol id="i-bolt" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M27 4L10 27h12l-3 17 19-25H26z"/></g></symbol>
+    <symbol id="i-pulse" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 26h9l5-13 8 23 6-14 3 4h9"/></g></symbol>
+    <symbol id="i-bike" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="32" r="8"/><circle cx="37" cy="32" r="8"/><path d="M11 32l8-16h12l6 16M19 16l8 16M29 16l-2-5h5"/></g></symbol>
+    <symbol id="i-yoga" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="10" r="4.5"/><path d="M24 16v10M10 20c8 2 12 2 14 0 2 2 6 2 14 0M12 40c4-2 8-6 12-6s8 4 12 6M24 26l-8 8M24 26l8 8"/></g></symbol>
+    <symbol id="i-music" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 36V10l22-5v26"/><circle cx="12" cy="36" r="6"/><circle cx="34" cy="31" r="6"/></g></symbol>
+    <symbol id="i-target" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="26" r="17"/><circle cx="24" cy="26" r="9"/><path d="M24 26L40 6M34 6h6v6"/></g></symbol>
+    <symbol id="i-leaf" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 40C6 20 18 8 42 6c0 24-12 36-30 34zM8 40l20-20"/></g></symbol>
+    <symbol id="i-timer" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="27" r="16"/><path d="M24 27l7-9M19 5h10M24 5v6"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="19"/><path d="M15 25l7 7 12-15"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 44S9 30 9 19a15 15 0 0130 0c0 11-15 25-15 25z"/><circle cx="24" cy="19" r="5.5"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6h8l4 10-5 3c3 6 6 9 12 12l3-5 10 4v8c0 3-3 5-6 5C20 43 5 28 5 12c0-3 2-6 5-6z"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="19"/><path d="M24 12v13l8 5"/></g></symbol>
+    <symbol id="i-car" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 30l4-12c1-2 3-3 5-3h16c2 0 4 1 5 3l4 12v8h-6v-4H13v4H7z"/><circle cx="14" cy="28" r="1.8"/><circle cx="34" cy="28" r="1.8"/></g></symbol>
+    <symbol id="i-people" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="15" r="6"/><circle cx="34" cy="17" r="5"/><path d="M5 40c0-8 5-13 12-13s12 5 12 13M30 29c6-1 13 2 13 11"/></g></symbol>
+    <symbol id="i-run" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="30" cy="8" r="4"/><path d="M20 44l6-14-8-6 6-10 8 6 8 2M18 22l-8 6"/></g></symbol>
+    <symbol id="i-room" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="9" width="38" height="30" rx="2"/><path d="M5 31h38M14 9v22M34 9v22"/></g></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></g></symbol>
+    <symbol id="i-wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16.04 3C9 3 3.3 8.7 3.3 15.7c0 2.3.6 4.4 1.7 6.3L3 29l7.2-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.7 12.7-12.7S23 3 16.04 3zm0 23.2c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-4.3 1.1 1.1-4.2-.3-.4a10.4 10.4 0 01-1.6-5.5c0-5.800 4.700-10.500 10.600-10.500s10.500 4.700 10.500 10.500-4.700 10.600-10.500 10.600zm5.800-7.900c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.200-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.2-1.400-.5-2.600-1.600-1-.9-1.600-1.900-1.800-2.200-.2-.3 0-.5.100-.7l.5-.5c.1-.2.200-.3.300-.5.100-.2.100-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1.100 1.100-1.100 2.600s1.100 3 1.300 3.200c.2.200 2.200 3.400 5.300 4.700.7.300 1.300.5 1.800.7.700.2 1.400.2 2 .1.600-.1 1.900-.8 2.200-1.500.3-.7.300-1.400.2-1.500-.1-.2-.3-.2-.6-.4z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></g></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M14 8V6.2c0-.8.2-1.200 1.300-1.200H17V2h-2.700C11.200 2 10 3.700 10 6v2H7.500v3H10v11h4V11h2.800l.4-3z"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24"><g><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="currentColor" d="M10 9l5 3-5 3z"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="home-top">
+  <div class="wrap nav-in">
+    <a class="logo" href="#home" aria-label="NRM FITNESS home">
+      <svg class="mk" aria-hidden="true"><use href="#i-plate"/></svg>
+      <span>NRM <b>FITNESS</b></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#membership">Membership</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-r">
+      <a class="btn sm" href="#membership">Join Now</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mmenu" aria-label="Open menu"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mmenu" hidden>
+    <div class="wrap">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#membership">Membership</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <svg class="plates" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width=".35" aria-hidden="true">
+      <circle cx="24" cy="24" r="23"/><circle cx="24" cy="24" r="19"/><circle cx="24" cy="24" r="15"/><circle cx="24" cy="24" r="11"/><circle cx="24" cy="24" r="7"/><circle cx="24" cy="24" r="3"/>
+    </svg>
+    <div class="slash"></div>
+    <div class="wrap hero-in">
+      <p class="tag">Build your strength. Define yourself.</p>
+      <h1>
+        <span>Your fitness.</span>
+        <span class="out">Your strength.</span>
+        <span class="acc">Your legacy.</span>
+      </h1>
+      <p class="sub">Transform your body, strengthen your mind and become the strongest version of yourself.</p>
+      <div class="cta-row">
+        <a class="btn" href="#membership">Join NRM Fitness</a>
+        <a class="btn ghost" href="#programs">Explore Our Programs</a>
+        <a class="btn ghost" href="#contact">Contact Us</a>
+      </div>
+      <div class="rating" aria-label="Rated 4.9 out of 5 on Google from 520 reviews">
+        <span class="big">4.9</span>
+        <div>
+          <div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <small>520 Google reviews · Jodhpur</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Weight Training</span><span>CrossFit</span><span>HIIT</span><span>Aerobics</span><span>Cycling</span><span>Yoga</span><span>Zumba</span><span>Personal Training</span><span>Nutrition</span><span>Private Lessons</span>
+      <span>Weight Training</span><span>CrossFit</span><span>HIIT</span><span>Aerobics</span><span>Cycling</span><span>Yoga</span><span>Zumba</span><span>Personal Training</span><span>Nutrition</span><span>Private Lessons</span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>4.9/5</b><span>Google rating</span></div>
+      <div class="stat"><b>520+</b><span>Google reviews</span></div>
+      <div class="stat"><b>10</b><span>Programs &amp; services</span></div>
+      <div class="stat"><b>10 PM</b><span>Open until</span></div>
+    </div>
+  </div>
+
+  <section class="sec" id="about">
+    <div class="wrap about">
+      <div class="rv">
+        <span class="label">About us</span>
+        <h2>Strength is built here.</h2>
+        <p>NRM FITNESS is a modern fitness centre on Pal Road in Keshavnagar, Jodhpur. Everything here is built around strength, health, performance and real, lasting transformation.</p>
+        <p>Whether you are walking in for the first time or training for your next personal best, you get proper equipment, trainers who pay attention, and a floor that people want to come back to.</p>
+      </div>
+      <ul class="points rv">
+        <li><svg aria-hidden="true"><use href="#i-dumbbell"/></svg>Modern strength and cardio equipment</li>
+        <li><svg aria-hidden="true"><use href="#i-people"/></svg>Professional and supportive trainers</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Clean and well-maintained workout environment</li>
+        <li><svg aria-hidden="true"><use href="#i-bolt"/></svg>Friendly and motivating atmosphere</li>
+        <li><svg aria-hidden="true"><use href="#i-run"/></svg>Suitable for beginners and experienced athletes</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec sec-alt" id="programs">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="label">Our fitness programs</span>
+        <h2>Ten ways to train.</h2>
+        <p>Pick the style that suits your goal. Tap Learn More and we will take your interest straight to the enquiry form.</p>
+      </div>
+      <div class="grid-prog">
+        <article class="card rv"><div class="vis"><svg aria-hidden="true"><use href="#i-dumbbell"/></svg></div><div class="body"><h3>Weight Training</h3><p>Build muscle and raw strength with free weights, racks and machines, with guidance on form and progression.</p><button class="btn sm ghost learn" type="button" data-interest="Weight Training">Learn More</button></div></article>
+        <article class="card rv"><div class="vis"><svg aria-hidden="true"><use href="#i-kettle"/></svg></div><div class="body"><h3>CrossFit</h3><p>Varied, high-intensity functional workouts that build strength, stamina and mobility together.</p><button class="btn sm ghost learn" type="button" data-interest="CrossFit">Learn More</button></div></article>
+        <article class="card rv"><div class="vis"><svg aria-hidden="true"><use href="#i-bolt"/></svg></div><div class="body"><h3>HIIT Training</h3><p>Short, hard intervals that raise your heart rate, burn fat and keep your metabolism working after you leave.</p><button class="btn sm ghost learn" type="button" data-interest="HIIT Training">Learn More</button></div></article>
+        <article class="card rv"><div class="vis"><svg aria-hidden="true"><use href="#i-pulse"/></svg></div><div class="body"><h3>Aerobics</h3><p>Energetic, rhythm-led cardio classes that improve endurance and coordination while keeping it fun.</p><button class="btn sm ghost learn" type="button" data-interest="Aerobics">Learn More</button></div></article>
+        <article class="card rv"><div class="vis"><svg aria-hidden="true"><use href="#i-bike"/></svg></div><div class="body"><h3>Cycling</h3><p>Low-impact cardio that builds leg strength and stamina, with a dedicated cardio section to ride in.</p><button class="btn sm ghost learn" type="button" data-interest="Cycling">Learn More</button></div></article>
+        <article class="card rv"><div class="vis"><svg aria-hidden="true"><use href="#i-yoga"/></svg></div><div class="body"><h3>Yoga Classes</h3><p>Improve flexibility, balance and focus, and recover better from harder training days.</p><button class="btn sm ghost learn" type="button" data-interest="Yoga Classes">Learn More</button></div></article>
+        <article class="card rv"><div class="vis"><svg aria-hidden="true"><use href="#i-music"/></svg></div><div class="body"><h3>Zumba</h3><p>Dance-based workouts set to music. Burn calories, lift your mood and forget you are exercising.</p><button class="btn sm ghost learn" type="button" data-interest="Zumba">Learn More</button></div></article>
+        <article class="card rv"><div class="vis"><svg aria-hidden="true"><use href="#i-target"/></svg></div><div class="body"><h3>Personal Training</h3><p>One-to-one coaching with a plan built around your body, your goal and your schedule.</p><button class="btn sm ghost learn" type="button" data-interest="Personal Training">Learn More</button></div></article>
+        <article class="card rv"><div class="vis"><svg aria-hidden="true"><use href="#i-leaf"/></svg></div><div class="body"><h3>Nutrition Consulting</h3><p>Practical eating guidance that supports your training, whether you want to lose fat or gain muscle.</p><button class="btn sm ghost learn" type="button" data-interest="Nutrition Consulting">Learn More</button></div></article>
+        <article class="card rv"><div class="vis"><svg aria-hidden="true"><use href="#i-timer"/></svg></div><div class="body"><h3>Private Fitness Lessons</h3><p>Dedicated sessions for individuals or small groups who want focused attention at their own pace.</p><button class="btn sm ghost learn" type="button" data-interest="Private Fitness Lessons">Learn More</button></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="why">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="label">Why choose NRM FITNESS</span>
+        <h2>Reasons members stay.</h2>
+      </div>
+      <div class="why rv">
+        <div><svg aria-hidden="true"><use href="#i-star"/></svg><h3>4.9/5 on Google</h3><p>One of the highest-rated gyms in the city.</p></div>
+        <div><svg aria-hidden="true"><use href="#i-people"/></svg><h3>520+ reviews</h3><p>Hundreds of members have shared their experience.</p></div>
+        <div><svg aria-hidden="true"><use href="#i-dumbbell"/></svg><h3>Modern equipment</h3><p>Strength and cardio machines you can rely on.</p></div>
+        <div><svg aria-hidden="true"><use href="#i-target"/></svg><h3>Supportive trainers</h3><p>Experienced coaches who help you train well.</p></div>
+        <div><svg aria-hidden="true"><use href="#i-room"/></svg><h3>Clean and spacious</h3><p>Room to move, and a floor that is kept tidy.</p></div>
+        <div><svg aria-hidden="true"><use href="#i-pulse"/></svg><h3>Dedicated cardio section</h3><p>A separate area for treadmills, bikes and more.</p></div>
+        <div><svg aria-hidden="true"><use href="#i-bolt"/></svg><h3>Welcoming to everyone</h3><p>Beginners and seasoned lifters train side by side.</p></div>
+        <div><svg aria-hidden="true"><use href="#i-car"/></svg><h3>On-site parking</h3><p>Park at the building and walk straight in.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-alt" id="gallery">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="label">Gym gallery</span>
+        <h2>Inside the floor.</h2>
+        <p>The areas you will train in, from the weight room to the cardio zone.</p>
+      </div>
+      <div class="gal">
+        <div class="tile t1 rv"><svg aria-hidden="true"><use href="#i-dumbbell"/></svg><div class="cap"><span>Strength</span><b>Strength training equipment</b></div></div>
+        <div class="tile rv"><svg aria-hidden="true"><use href="#i-pulse"/></svg><div class="cap"><span>Cardio</span><b>Cardio machines</b></div></div>
+        <div class="tile rv"><svg aria-hidden="true"><use href="#i-plate"/></svg><div class="cap"><span>Free weights</span><b>Weight training area</b></div></div>
+        <div class="tile t4 rv"><svg aria-hidden="true"><use href="#i-people"/></svg><div class="cap"><span>Together</span><b>Group workout sessions</b></div></div>
+        <div class="tile rv"><svg aria-hidden="true"><use href="#i-target"/></svg><div class="cap"><span>One to one</span><b>Personal training</b></div></div>
+        <div class="tile rv"><svg aria-hidden="true"><use href="#i-room"/></svg><div class="cap"><span>Space</span><b>Gym interiors</b></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="reviews">
+    <div class="wrap">
+      <div class="rev-top">
+        <div class="sec-head rv" style="margin:0">
+          <span class="label">Member reviews</span>
+          <h2>What members say.</h2>
+        </div>
+        <div class="rating rv">
+          <span class="big">4.9</span>
+          <div>
+            <div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+            <small>520 Google reviews</small>
+          </div>
+        </div>
+      </div>
+      <div class="rev-grid">
+        <div class="rev rv"><div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><h3>Excellent equipment</h3><p>Members regularly praise the quality and range of the equipment and facilities.</p></div>
+        <div class="rev rv"><div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><h3>Clean and hygienic</h3><p>A tidy, well-kept environment is one of the most mentioned reasons people recommend us.</p></div>
+        <div class="rev rv"><div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><h3>Helpful trainers</h3><p>Reviewers describe trainers who are knowledgeable and ready to help.</p></div>
+        <div class="rev rv"><div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><h3>Friendly and motivating</h3><p>The atmosphere on the floor keeps members encouraged and coming back.</p></div>
+        <div class="rev rv"><div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><h3>Spacious workout areas</h3><p>Plenty of room to train comfortably, even when the gym is busy.</p></div>
+        <div class="rev rv" style="align-content:center">
+          <h3>Read every review</h3>
+          <p>These are themes from our Google reviews. The full reviews, written by real members, are on Google.</p>
+          <a class="btn sm" href="https://www.google.com/maps/search/?api=1&query=NRM+Fitness+Pal+Road+Keshavnagar+Jodhpur" target="_blank" rel="noopener">See Google Reviews</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-alt" id="membership">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="label">Membership</span>
+        <h2>Pick your plan.</h2>
+        <p>Choose the length that fits your goal. Tell us which one you want and we will get back to you with pricing and joining details.</p>
+      </div>
+      <div class="plans">
+        <div class="plan rv"><h3>Monthly</h3><div class="price">Contact us for membership pricing</div><p>Try the gym and build the habit.</p><button class="btn sm ghost enq" type="button" data-interest="Monthly Membership">Enquire</button></div>
+        <div class="plan rv"><h3>Quarterly</h3><div class="price">Contact us for membership pricing</div><p>Three months to see real change.</p><button class="btn sm ghost enq" type="button" data-interest="Quarterly Membership">Enquire</button></div>
+        <div class="plan feat rv"><h3>Half-Yearly</h3><div class="price">Contact us for membership pricing</div><p>Six months of steady progress.</p><button class="btn sm enq" type="button" data-interest="Half-Yearly Membership">Enquire</button></div>
+        <div class="plan rv"><h3>Annual</h3><div class="price">Contact us for membership pricing</div><p>A full year to transform.</p><button class="btn sm ghost enq" type="button" data-interest="Annual Membership">Enquire</button></div>
+        <div class="plan rv"><h3>Personal Training</h3><div class="price">Contact us for membership pricing</div><p>One-to-one coaching, built for you.</p><button class="btn sm ghost enq" type="button" data-interest="Personal Training">Enquire</button></div>
+      </div>
+
+      <div class="join rv" id="enquiry">
+        <div>
+          <span class="label">Membership enquiry</span>
+          <h3>Join now.</h3>
+          <p class="lead">Fill in your details and choose what you are interested in. We will prepare your enquiry as a WhatsApp message to NRM FITNESS, so you can send it in one tap.</p>
+        </div>
+        <div>
+          <form id="joinForm" novalidate>
+            <div class="row2">
+              <div class="field"><label for="j-name">Name</label><input id="j-name" name="name" type="text" autocomplete="name" required><div class="err" id="j-name-e" aria-live="polite"></div></div>
+              <div class="field"><label for="j-phone">Phone number</label><input id="j-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required><div class="err" id="j-phone-e" aria-live="polite"></div></div>
+            </div>
+            <div class="field">
+              <label for="j-int">I am interested in</label>
+              <select id="j-int" name="interest">
+                <option>Monthly Membership</option>
+                <option>Quarterly Membership</option>
+                <option>Half-Yearly Membership</option>
+                <option>Annual Membership</option>
+                <option>Personal Training</option>
+                <option>Weight Training</option>
+                <option>CrossFit</option>
+                <option>HIIT Training</option>
+                <option>Aerobics</option>
+                <option>Cycling</option>
+                <option>Yoga Classes</option>
+                <option>Zumba</option>
+                <option>Nutrition Consulting</option>
+                <option>Private Fitness Lessons</option>
+              </select>
+            </div>
+            <div class="field"><label for="j-msg">Message (optional)</label><textarea id="j-msg" name="message"></textarea></div>
+            <button class="btn block" type="submit">Join Now</button>
+          </form>
+          <div class="result" id="joinResult" hidden></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="contact">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="label">Contact</span>
+        <h2>Come and train.</h2>
+        <p>Visit the gym, call us or message on WhatsApp.</p>
+      </div>
+      <div class="contact">
+        <div class="rv">
+          <div class="info">
+            <div><svg aria-hidden="true"><use href="#i-pin"/></svg><div><h3>Address</h3><p>1st &amp; 2nd Floor, Pal Road, Opposite Ashok Udyan, Keshavnagar, Jodhpur, Rajasthan 342008</p></div></div>
+            <div><svg aria-hidden="true"><use href="#i-phone"/></svg><div><h3>Phone</h3><p><a href="tel:+919828350520">+91 98283 50520</a></p></div></div>
+            <div><svg aria-hidden="true"><use href="#i-clock"/></svg><div><h3>Opening hours</h3><p>Open until 10 PM</p><p class="dim">Call to confirm the morning opening time.</p></div></div>
+            <div><svg aria-hidden="true"><use href="#i-car"/></svg><div><h3>Parking and facilities</h3><p>On-site parking and restroom</p></div></div>
+          </div>
+          <div class="btns">
+            <a class="btn" href="tel:+919828350520">Call Now</a>
+            <a class="btn ghost" href="https://www.google.com/maps/dir/?api=1&destination=NRM+Fitness+Pal+Road+Opposite+Ashok+Udyan+Keshavnagar+Jodhpur+342008" target="_blank" rel="noopener">Get Directions</a>
+            <a class="btn ghost" href="https://wa.me/919828350520?text=Hello%20NRM%20FITNESS%2C%20I%20would%20like%20to%20enquire%20about%20membership." target="_blank" rel="noopener">WhatsApp Enquiry</a>
+          </div>
+        </div>
+        <div class="rv" style="display:grid;gap:22px;align-content:start">
+          <div class="map" role="img" aria-label="Map showing NRM FITNESS on Pal Road, Keshavnagar, Jodhpur">
+            <svg class="pin" aria-hidden="true" viewBox="0 0 48 48"><path fill="currentColor" d="M24 44S9 30 9 19a15 15 0 0130 0c0 11-15 25-15 25z"/><circle cx="24" cy="19" r="5.5" fill="#0b0b0c"/></svg>
+            <span class="pulse"></span>
+            <div class="box"><b>NRM FITNESS</b><span>Pal Road, opposite Ashok Udyan, Keshavnagar, Jodhpur</span><a class="btn sm" style="margin-top:10px;justify-self:start" href="https://www.google.com/maps/search/?api=1&query=NRM+Fitness+Pal+Road+Keshavnagar+Jodhpur" target="_blank" rel="noopener">Open in Google Maps</a></div>
+          </div>
+          <form id="contactForm" novalidate>
+            <div class="row2">
+              <div class="field"><label for="c-name">Name</label><input id="c-name" name="name" type="text" autocomplete="name" required><div class="err" id="c-name-e" aria-live="polite"></div></div>
+              <div class="field"><label for="c-phone">Phone number</label><input id="c-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required><div class="err" id="c-phone-e" aria-live="polite"></div></div>
+            </div>
+            <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" required></textarea><div class="err" id="c-msg-e" aria-live="polite"></div></div>
+            <button class="btn block" type="submit">Send Message</button>
+          </form>
+          <div class="result" id="contactResult" hidden></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="logo" href="#home"><svg class="mk" aria-hidden="true"><use href="#i-plate"/></svg><span>NRM <b>FITNESS</b></span></a>
+        <p>A modern fitness centre in Jodhpur built around strength, health and performance. Build your strength. Define yourself.</p>
+        <div class="soc">
+          <!-- Placeholder links: replace with the official profiles when available. -->
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg aria-hidden="true"><use href="#i-yt"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#membership">Membership</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Programs</h4>
+        <ul>
+          <li>Weight Training</li><li>CrossFit</li><li>HIIT Training</li><li>Aerobics</li><li>Cycling</li><li>Yoga Classes</li><li>Zumba</li><li>Personal Training</li><li>Nutrition Consulting</li><li>Private Fitness Lessons</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>1st &amp; 2nd Floor, Pal Road, Opposite Ashok Udyan, Keshavnagar, Jodhpur, Rajasthan 342008</li>
+          <li><a href="tel:+919828350520">+91 98283 50520</a></li>
+          <li>Open until 10 PM</li>
+          <li>On-site parking and restroom</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy"><span>© <span id="yr">2026</span> NRM FITNESS. All rights reserved.</span><span>Jodhpur, Rajasthan</span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/919828350520?text=Hello%20NRM%20FITNESS%2C%20I%20would%20like%20to%20enquire%20about%20membership." target="_blank" rel="noopener" aria-label="Chat with NRM FITNESS on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+<script>
+(function () {
+  var WA = '919828350520';
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  $('#yr').textContent = new Date().getFullYear();
+
+  // Mobile menu
+  var burger = $('#burger'), menu = $('#mmenu');
+  function setMenu(open) {
+    menu.hidden = !open;
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  burger.addEventListener('click', function () { setMenu(menu.hidden); });
+  $$('a', menu).forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+
+  // Scroll reveal (content stays visible; only a slide-in)
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    $$('.rv').forEach(function (el) { io.observe(el); });
+  } else {
+    $$('.rv').forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Learn More / Enquire -> prefill the enquiry form
+  function goEnquiry(interest) {
+    var sel = $('#j-int');
+    $$('option', sel).forEach(function (o) { if (o.value === interest || o.textContent === interest) sel.value = o.value; });
+    $('#enquiry').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    setTimeout(function () { $('#j-name').focus({ preventScroll: true }); }, 500);
+  }
+  $$('.learn, .enq').forEach(function (b) { b.addEventListener('click', function () { goEnquiry(b.getAttribute('data-interest')); }); });
+
+  // Forms: no server, so build a ready-to-send WhatsApp message
+  function validPhone(v) { return v.replace(/\D/g, '').length >= 10; }
+  function setErr(id, msg) { $('#' + id).textContent = msg || ''; }
+  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+
+  function showResult(box, text, intro) {
+    var url = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(text);
+    box.innerHTML = '<p><strong>' + intro + '</strong></p><p>' + esc(text).replace(/\n/g, '<br>') + '</p>' +
+      '<div class="acts"><a class="btn sm" target="_blank" rel="noopener" href="' + url + '">Send on WhatsApp</a>' +
+      '<button class="btn sm ghost" type="button" data-copy>Copy message</button></div>' +
+      '<p class="dim" style="font-size:.9rem">You can also call +91 98283 50520.</p>';
+    box.hidden = false;
+    var cb = $('[data-copy]', box);
+    cb.addEventListener('click', function () {
+      function done() { cb.textContent = 'Copied'; setTimeout(function () { cb.textContent = 'Copy message'; }, 1800); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () { cb.textContent = 'Press Ctrl+C on the text'; });
+      } else { cb.textContent = 'Select and copy the text'; }
+    });
+    box.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'nearest' });
+  }
+
+  $('#joinForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var n = $('#j-name').value.trim(), p = $('#j-phone').value.trim(), i = $('#j-int').value, m = $('#j-msg').value.trim();
+    var ok = true;
+    setErr('j-name-e', n ? '' : 'Enter your name.'); if (!n) ok = false;
+    setErr('j-phone-e', validPhone(p) ? '' : 'Enter a phone number with at least 10 digits.'); if (!validPhone(p)) ok = false;
+    if (!ok) return;
+    var text = 'Hello NRM FITNESS, I would like to join.\nName: ' + n + '\nPhone: ' + p + '\nInterested in: ' + i + (m ? '\nMessage: ' + m : '');
+    showResult($('#joinResult'), text, 'Your enquiry is ready. Send it to NRM FITNESS on WhatsApp.');
+  });
+
+  $('#contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var n = $('#c-name').value.trim(), p = $('#c-phone').value.trim(), m = $('#c-msg').value.trim();
+    var ok = true;
+    setErr('c-name-e', n ? '' : 'Enter your name.'); if (!n) ok = false;
+    setErr('c-phone-e', validPhone(p) ? '' : 'Enter a phone number with at least 10 digits.'); if (!validPhone(p)) ok = false;
+    setErr('c-msg-e', m ? '' : 'Write a short message.'); if (!m) ok = false;
+    if (!ok) return;
+    var text = 'Hello NRM FITNESS,\nName: ' + n + '\nPhone: ' + p + '\nMessage: ' + m;
+    showResult($('#contactResult'), text, 'Your message is ready. Send it to NRM FITNESS on WhatsApp.');
+  });
+})();
+</script>
+
+</body></html>
